@@ -334,8 +334,8 @@ a { /*Removes underline from all text links*/
 .why-to-adopt, .explanation, .how-to-adopt, .donate-to-us { /*Makes text styled*/
     color: #67462E;
     font-size: 1vw;
-	padding-bottom: 1vw;
-	padding-top: 1vw;
+	padding-bottom: 5vw;
+	padding-top: 5vw;
 }
 .how-to-adopt {
     text-align: center; 
