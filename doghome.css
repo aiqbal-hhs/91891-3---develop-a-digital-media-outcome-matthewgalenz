@@ -1,0 +1,401 @@
+html { /*Sets the colour for the whole page background*/
+  background-color: #ECDFCA;
+}
+body { 
+    font: 14px/2 Georgia, serif;
+    margin: 0;
+}
+body, html {
+    height: 100%;
+    min-height: 100%;
+}
+h1, h2 { /*This manages the headers*/
+  line-height: 1.2;
+}
+
+p, ul, h1 { /*This makes there be no margin on most text*/
+  margin: 0 0 1rem 0; 
+}
+
+.title { /*Title style as well as animation style*/
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding-top: 15vw;
+    text-shadow: 0.25vw 0.25vw #35321E;
+    animation-name: text-shadow-fade-in;
+    animation-duration: 1s;
+}
+
+@keyframes text-shadow-fade-in { /*Responsible for the animation transformation*/
+    from {text-shadow: 0vw 0vw #35321E;}
+    to {text-shadow: 0.25vw 0.25vw #35321E;}
+}
+.fixed-bg { /*Makes the background fixed on all browsers*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-image: url("./../assets/dog-banner.jpg");
+    background-size: ;
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 3vw;
+    margin-left: ;
+    margin-right: ;
+    margin: 0;
+    padding-right: ;
+    padding-left: ;
+    }
+#menu { /*Manages styles of nav bar/menu*/
+	background: #ECDFCA;
+	background: linear-gradient(to bottom,  #ECDFCA,  #DED0BA);
+	color: #A49F60;
+	height: 50px;
+	padding-left: 20px;
+	border-radius: 0;
+    position: sticky;
+    top: 0;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 50px;
+	padding: 0 15px;
+	text-decoration: none;
+	color: #A49F60;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\2B9F";
+	margin-left: 8px;
+}
+#menu li a:hover {
+	color: #0099CC;
+	background: #F2EBDF;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 2.5vw;
+	text-align: center;
+	position: absolute;
+}
+#menu label:before {
+	content: "\2261"; 
+	margin-left: 1vw;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #ECDFCA;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #A49F60;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2EBDF;
+	color: #0099CC;
+}
+@media screen and (max-width: 800px){ /*Makes nav bar turn into a button with drop down links if the screen is too small too properly view otherwise*/
+	#menu {position:sticky;top:0;}
+	#menu ul {background:#ECDFCA;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:1.6vw;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:#A49F60}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+    fixed-bg {background-image: url("./../assets/dog-banner.jpg");}
+}
+.stickynav { /*Code responsible for the sticky side nav bar*/
+    color: #A49F60;
+    font-size: 1vw;
+    position: sticky;
+    top: 0;
+    text-decoration: none;
+    padding-left: 5px;
+}
+.stickynav a {
+    color: #A49F60;
+}
+.sitckynav a:hover {
+    color: #0099CC;
+    background: #F2EBDF;
+}
+.pointer{ /*Makes the cursor a pointer to indicate a link when hovering over some links that otherwise weren't obviously links*/
+    cursor: pointer;
+}
+.grid-container1, .grid-container2, .grid-container3, .grid-container4, .grid-container5, .grid-container6 { /*manages the grid layout*/
+  display: grid;
+}
+.item1a {
+    grid-column: 1;
+    grid-row: 1;
+    width: 4vw;
+    height: auto;
+}
+.item1b {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    width: auto;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    height: auto;
+}
+.item1c {
+    grid-column: 4;
+    grid-row: 1;
+    width: 3vw;
+    height: auto;
+}
+.item2a {
+    grid-column: 1;
+    grid-row: 2;
+    width: auto;
+    padding-right: 1vw;
+    height: auto;
+}
+.item2a img {
+    padding-top: 1vw;
+}
+.item2b {
+    grid-column: 2;
+    grid-row: 2;
+    width: auto;
+    height: auto;
+}
+.grid-container3 {
+    color: #67462E;
+    font-size: 0.8vw;
+}
+.item3a {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+}
+.item3b {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+.item3c {
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+}
+.item3d {
+    grid-column: 4;
+    grid-row: 1;
+    width: 100%;
+}
+.item3e {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+}
+.item3f {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+}
+.item3g {
+    grid-column: 3;
+    grid-row: 2;
+    width: 100%;
+}
+.item3h {
+    grid-column: 4;
+    grid-row: 2;
+    width: 100%;
+}
+.item3i {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+}
+.item3j {
+    grid-column: 2;
+    grid-row: 3;
+    width: 100%;
+}
+.item3k {
+    grid-column: 3;
+    grid-row: 3;
+    width: 100%;
+}
+.item3l {
+    grid-column: 4;
+    grid-row: 3;
+    width: 100%;
+}
+.item3m {
+    grid-column: 1;
+    grid-row: 4;
+    width: 100%;
+}
+.item3n {
+    grid-column: 2;
+    grid-row: 4;
+    width: 100%;
+}
+.item3o {
+    grid-column: 3;
+    grid-row: 4;
+    width: 100%;
+}
+.item3p {
+    grid-column: 4;
+    grid-row: 4;
+    width: 100%;
+}
+.grid-container4 {
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 0.3vw;
+    text-align: center;
+}
+.grid-container5 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.grid-container5 img{
+    height: 60vh;
+    width: 100%;
+}
+.item5a {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+}
+.item5b {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+item6a {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+}
+item6b {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+}
+.grid-container6 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+a { /*Removes underline from all text links*/
+    text-decoration: none;
+}
+.sidenav { /*Responsible for text style inside side nav bar*/
+    font-size: 1vw;
+    display: block;
+    line-height: 0.75vw;
+    color: #A49F60;
+}
+.why-to-adopt, .explanation, .how-to-adopt, .donate-to-us { /*Makes text styled*/
+    color: #67462E;
+    font-size: 1vw;
+}
+.how-to-adopt {
+    text-align: center; 
+}
+.how-to-adopt a {
+    color: #A49F60;
+}
+.donate-to-us {
+    text-align: center;
+}
+.paragraph {
+    text-align: center;
+    line-height: 1.5;
+    color: #67462E;
+    font-size: 1vw;
+}
+h2 {
+    font-size: 2vw;
+    line-height: 0.5;
+    text-align: center;
+}
+.title-text h2 {
+    font-size: 3vw;
+    line-height: 0.5;
+    text-align: center;
+}
+.breed-img {
+    position: relative;
+    text-align: center;
+}
+.bottom-img { /*Positions text and images so that they don't break with weird scaling*/
+    bottom: 0.7vw;
+    position: 50%;
+}
+.breed-img img {
+    width: 100%;
+    max-height: 14vw;
+}
+footer { /*Styles footer*/
+    background-color: #A49F60;
+    color: white;
+}
+footer a {
+    color: white;
+}
+.title-text{ /*Styles title text on individual dog breed pages*/
+    font-size: 2vw;
+    color: #67462E;
+    font: Georgia, serif; 
+}
+.dog-stats{ /*More paragraph styling for dog statistics*/
+    padding-left: 1vw;
+    line-height: 1.5;
+    color: #67462E;
+    font-size: 2vw;
+}
+.padding { /*A layer of padding for below a paragraph*/
+    padding-bottom: 1vh;
+}
+.phone-img img{ /*Set's size of my phone gif*/
+    width: 10vw;
+}
+.our-purpose{
+    color: #67462E;
+}
