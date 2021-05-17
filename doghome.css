@@ -35,7 +35,7 @@ p, ul, h1 { /*This makes there be no margin on most text*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-image: url("./../assets/dog-banner.jpg");
+    background-image: url("dog-banner.jpg");
     background-size: ;
     min-height: 100%;
     background-attachment: fixed;
